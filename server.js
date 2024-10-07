@@ -75,7 +75,7 @@ app.get('/shoes', (req, res) => {
 
     /* My original idea was to create an output array, and print it out IF it had anything in it */
 
-    if (shoeType) {
+    if (shoeType) { /* If shoetype was specified, include it in if statement, otherwise, only include prices. */
         for (shoe of shoes) {
             if (shoe.type === shoeType && shoe.price >= minPrice && shoe.price <= maxPrice) {
                 output.push(shoe)
